@@ -1,0 +1,24 @@
+class Solution {
+    public List<String> cellsInRange(String s) {
+        ArrayList<String> arr = new ArrayList<>();
+        //65-90 A = 65 Z = 90
+        int startCol = s.charAt(0);
+        int endCol = s.charAt(3);
+        int startRow = s.charAt(1)-48;
+        int endRow = s.charAt(4)-48;
+        char C= 'C';
+        while(startCol <= endCol){
+            for(int i = startRow; i <= endRow; i++){
+                arr.add(""+ (char)startCol+i);
+            }
+            // System.out.println(startCol);
+            // System.out.println(endCol);
+            // System.out.println(startRow);
+            // System.out.println(endRow);
+
+            startCol++;
+        }
+
+        return arr;
+    }
+}

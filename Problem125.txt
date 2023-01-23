@@ -1,0 +1,47 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+        int start = 0;
+        int end = s.length()-1;
+        String lc = s.toLowerCase();
+        
+        while(start < end){
+            if(!Character.isLetter(lc.charAt(start)) && !Character.isDigit(lc.charAt(start))){
+                start++;
+            }else if(!Character.isLetter(lc.charAt(end)) && !Character.isDigit(lc.charAt(end))){
+                end--;
+
+            }else{
+                if(lc.charAt(start) != lc.charAt(end)){
+                    return false;
+                }
+                start++;
+                end--;
+            }
+
+
+        }
+     
+
+
+        // while(start < end){
+        //     if(!Character.isLetter(lowerCase.charAt(start)) && Character.isDigit(lowerCase.charAt(start))){
+        //         start++;
+        //     }
+        //     if(!Character.isLetter(lowerCase.charAt(end))&& Character.isDigit(lowerCase.charAt(end))){
+        //         end--;
+        //     }
+        //     if(Character.isLetter(lowerCase.charAt(start)) || Character.isDigit(lowerCase.charAt(start))&& 
+        //     Character.isLetter(lowerCase.charAt(end)) || Character.isDigit(lowerCase.charAt(end))){
+        //         if(lowerCase.charAt(start)!= lowerCase.charAt(end)){
+        //             return false;
+        //         }
+        //     start++;
+        //     end--;
+        //     }
+
+        // }
+
+        return true;
+     
+    }
+}

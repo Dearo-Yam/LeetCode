@@ -1,0 +1,33 @@
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+       
+       if(head == null)return false;
+
+       ListNode slow = head;
+       ListNode fast = head.next;
+
+        //what we want to achive is if the fast one can over lap the slow and be on the same node we will return true else always return false
+        while(fast != null && fast.next !=null){
+            //if fast = null then there is no cycle
+            //if fast.next = null then there is no cycle
+            //null values should not exist in a cycle
+            if(fast == slow)return true;
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return false;
+
+    }
+}

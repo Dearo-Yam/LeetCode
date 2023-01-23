@@ -1,0 +1,65 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        //there will always be atleast one value in the array to at a minimum we return 1;
+        //therefore we can start at 1
+
+        //our temp number will be used to track the current value we are comparing
+        //[0,0,0,0,1,2,3]
+        //we have to track 0 for 4 indexes
+
+        //iterate through the array
+   
+            //if the number at the current index does not match our current number
+            //we know that our list is sorted
+            //nums at our index can be set to 
+
+
+
+
+
+
+
+    // int ans = 1;
+    // int temp = nums[0];
+    // for(int i  =0; i <  nums.length; i++){
+    //     if(nums[i] != temp){
+    //         nums[ans] = nums[i];
+    //         temp = nums[ans];
+    //         ans++;
+    //     }
+
+    // }
+    // return ans;
+
+
+
+
+    int ans = 1;
+    int temp = nums[0];
+
+    for(int i =0; i < nums.length; i++){
+        if(nums[i] != temp){
+            nums[ans] = nums[i];
+            temp = nums[i];
+            ans++;
+        }
+    }
+    return ans;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }    
+}
